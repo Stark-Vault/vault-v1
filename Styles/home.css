@@ -1,4 +1,43 @@
+*{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
 body{
+    font-family:"Titillium Web", sans-serif;
     background-color: black;
     color: white;
+}
+
+#logo{
+    font-weight: 600;
+    font-style: normal;
+    font-size: xx-large;
+    padding-left: 80px;
+    padding-top: 22px;
+    display: inline-block;
+}
+
+#navlinks ul {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  left: 60%;
+  bottom: 90%;
+}
+
+#navlinks li {
+  margin: 0;
+}
+
+#navlinks a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: larger;
+  font-weight: 300;
 }
