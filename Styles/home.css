@@ -1,43 +1,140 @@
-*{
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family:"Titillium Web", sans-serif;
-    background-color: black;
-    color: white;
+/* Body */
+body {
+  font-family: "Titillium Web", sans-serif;
+  background-color: black;
+  color: white;
 }
 
-#logo{
-    font-weight: 600;
-    font-style: normal;
-    font-size: xx-large;
-    padding-left: 80px;
-    padding-top: 22px;
-    display: inline-block;
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: relative;
+  z-index: 100;
 }
 
+#logo {
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+/* Navbar links */
 #navlinks ul {
   display: flex;
-  position: absolute;
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  left: 60%;
-  bottom: 90%;
-}
-
-#navlinks li {
-  margin: 0;
 }
 
 #navlinks a {
   text-decoration: none;
   color: white;
-  padding: 10px 15px;
   font-size: larger;
   font-weight: 300;
+  transition: color 0.3s;
+}
+
+#navlinks a:hover {
+  color: #00ffcc;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  user-select: none;
+}
+
+/* Gradient Line */
+.nav-line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, black, white);
+  margin-top: 5px;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  font-weight: 900;
+  font-size: 100px;
+  margin: 40px 20px 60px 20px;
+  line-height: 1.1;
+  color: white;
+}
+
+#hero-gif-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 20px auto 60px auto;
+  position: relative;
+}
+
+#hero-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: translateY(-10px); /* moves GIF slightly up */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  #navlinks ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  #navlinks.active ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, black, white);
+    margin-top: 5px;
+  }
+
+  #hero {
+    font-size: 50px;
+    margin: 30px 10px 40px 10px;
+  }
+
+  #hero-gif {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    font-size: 32px;
+    margin: 20px 5px 30px 5px;
+  }
+
+  #hero-gif {
+    transform: translateY(-3px);
+  }
 }
