@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../Styles/home.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <div id="logo"><p>Vault</p></div>
     <div id="navlinks">
@@ -21,6 +22,27 @@
         <li><a href="">Resources</a></li>
       </ul>
     </div>
+    <div class="hamburger">☰</div>
   </nav>
+
+  <!-- Gradient Line -->
+  <div class="nav-line"></div>
+
+  <!-- Hero Section -->
+  <div id="hero">
+    <p>The Destination for Data.</p>
+    <div id="hero-gif-container">
+      <img src="C:\Users\srira\OneDrive\Desktop\vault-v1\assets\gifs\download.gif" alt="Data GIF" id="hero-gif">
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navlinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
