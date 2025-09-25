@@ -73,11 +73,12 @@ nav {
 }
 
 #hero-gif-container {
-  width: 100%;
-  height: 500px;
+  width: 105%;
+  height: 600px;
   overflow: hidden;
   margin: 20px auto 60px auto;
   position: relative;
+  margin-left: -30px; /* moves container slightly left */
 }
 
 #hero-gif {
@@ -89,6 +90,7 @@ nav {
   transform: translateY(-10px); /* moves GIF slightly up */
 }
 
+/* Mobile view */
 /* Mobile view */
 @media (max-width: 768px) {
   #navlinks ul {
@@ -123,8 +125,14 @@ nav {
     margin: 30px 10px 40px 10px;
   }
 
+  #hero-gif-container {
+    width: 110%;        /* slightly wider to maintain coverage on smaller screens */
+    margin-left: -15px; /* reduce left shift for smaller screens */
+    height: 400px;      /* adjust height for tablet */
+  }
+
   #hero-gif {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* slightly move up */
   }
 }
 
@@ -134,7 +142,14 @@ nav {
     margin: 20px 5px 30px 5px;
   }
 
+  #hero-gif-container {
+    width: 115%;         /* maintain coverage on very small screens */
+    margin-left: -10px;  /* minimal left shift */
+    height: 300px;       /* smaller height for mobile */
+  }
+
   #hero-gif {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* slightly move up */
   }
 }
+
