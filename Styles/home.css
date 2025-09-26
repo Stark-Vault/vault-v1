@@ -62,24 +62,28 @@ nav {
   margin-top: 5px;
 }
 
-/* Hero Section */
 #hero {
   text-align: center;
   font-weight: 900;
   font-size: 100px;
-  margin: 40px 20px 60px 20px;
   line-height: 1.1;
   color: white;
+  position: relative;
+  z-index: 2;       /* text in front */
+  top: 50px;        /* moves the text down */
 }
+
 
 #hero-gif-container {
   width: 105%;
   height: 600px;
   overflow: hidden;
-  margin: 20px auto 60px auto;
-  position: relative;
-  margin-left: -30px; /* moves container slightly left */
+  position: absolute;  /* absolute positioning */
+  left: -30px;         /* slight left shift */
+  top: 150px;          /* move GIF down - adjust value as needed */
+  z-index: 1;          /* behind text */
 }
+
 
 #hero-gif {
   width: 100%;
@@ -87,8 +91,9 @@ nav {
   object-fit: cover;
   object-position: center;
   display: block;
-  transform: translateY(-10px); /* moves GIF slightly up */
+  transform: translateY(-10px);
 }
+
 
 /* Mobile view */
 /* Mobile view */
